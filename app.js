@@ -62,23 +62,23 @@ let progress1 = setInterval(() => {
 }, speed);
 
 let progress2 = setInterval(() => {
-  progressValue2++;
+  progressValue3++;
   progressbar3.style.background = `conic-gradient(
-        crimson ${progressValue2 * 3.6}deg,
-        rgb(247, 105, 117) ${progressValue2 * 3.5}deg
+        crimson ${progressValue3 * 3.6}deg,
+        rgb(247, 105, 117) ${progressValue3 * 3.5}deg
     )`;
-  if (progressValue2 === progressEndValue3) {
+  if (progressValue3 === progressEndValue3) {
     clearInterval(progress2);
   }
 }, speed);
 
 let progress3 = setInterval(() => {
-  progressValue3++;
+  progressValue4++;
   progressbar4.style.background = `conic-gradient(
-        crimson ${progressValue3 * 3.6}deg,
-        rgb(247, 105, 117) ${progressValue3 * 3.5}deg
+        crimson ${progressValue4 * 3.6}deg,
+        rgb(247, 105, 117) ${progressValue4 * 3.5}deg
     )`;
-  if (progressValue3 === progressEndValue4) {
+  if (progressValue4 === progressEndValue4) {
     clearInterval(progress3);
   }
 }, speed);

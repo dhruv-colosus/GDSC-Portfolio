@@ -7,6 +7,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 * {
   margin: 0;
@@ -40,6 +41,8 @@ header {
 }
 .nav_title {
   font-weight: 600;
+  padding: 1.5rem 0rem;
+
   /* margin-left: 10rem; */
   font-size: 0.8rem;
   flex: 1;
@@ -48,7 +51,6 @@ header {
   margin-left: 2rem;
 }
 .nav_details {
-  padding: 1.5rem 0rem;
   float: left;
   display: block;
   font-size: 1rem;
@@ -108,6 +110,9 @@ header {
   margin-top: 10rem;
   flex: 1;
   margin-left: 2rem;
+}
+.capital {
+  color: var(--link);
 }
 
 .home_img {
@@ -178,8 +183,7 @@ header {
   margin: 0 auto !important;
   min-height: 450px;
 }
-.hobby_container {
-}
+
 .hobby_container h1 {
   color: #6f2232;
   font-size: 2rem;
@@ -384,3 +388,85 @@ footer h1 {
 }
 
 /* Responsive Design */
+
+@media (max-width: 700px) {
+  header {
+    width: 100vw;
+  }
+  .home_container {
+    max-width: 1200px;
+    margin: 0 auto !important;
+    display: flex;
+    align-items: center;
+  }
+  .home_img {
+    display: none;
+  }
+  .nav_details {
+    padding: 1.5rem 0rem;
+    float: left;
+    display: none;
+    font-size: 1rem;
+  }
+  .skills_main {
+    display: flex;
+    flex-direction: column;
+  }
+  .skills_left {
+    width: 90vw;
+    padding-left: 15vw;
+  }
+  .skills_right {
+    width: 90vw;
+    padding: 20px;
+  }
+  .skills_right_flex {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 8vw;
+  }
+  .hobby_container {
+    margin-bottom: 300px;
+  }
+  #hobby {
+    padding-bottom: 1vw;
+  }
+  .hobbylist ul {
+    text-decoration: none;
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5vw;
+    align-items: center;
+  }
+
+  .home_left_btns {
+    margin-left: 18vw;
+  }
+
+  .btn1 {
+    margin-bottom: 5vw;
+  }
+
+  .box {
+    position: relative;
+    height: 40vw;
+    width: 40vw;
+    background-color: crimson;
+    border-radius: 50%;
+    margin-top: 40px;
+    display: grid;
+    place-items: center;
+  }
+}
+/* @media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+} */
