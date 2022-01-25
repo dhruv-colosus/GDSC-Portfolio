@@ -84,3 +84,19 @@ let progress3 = setInterval(() => {
 }, speed);
 
 //Responsive Design
+
+const open = document.querySelector(".barsss");
+const cross = document.querySelector(".crosss");
+const menu = document.querySelector(".ham_nav");
+const titlee = document.querySelector(".nav_list_ham");
+
+open.addEventListener("click", show);
+cross.addEventListener("click", close);
+titlee.addEventListener("click", close);
+function show() {
+  menu.style.left = "0";
+}
+
+function close() {
+  menu.style.left = "-100%";
+}

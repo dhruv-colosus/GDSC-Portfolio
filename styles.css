@@ -39,6 +39,11 @@ header {
   max-width: 1200px;
   margin: 0 auto !important;
 }
+.menu-btn {
+  font-size: 45px;
+  margin-right: 30px;
+  display: none;
+}
 .nav_title {
   font-weight: 600;
   padding: 1.5rem 0rem;
@@ -47,7 +52,7 @@ header {
   font-size: 0.8rem;
   flex: 1;
   float: left;
-  display: block;
+  display: flex;
   margin-left: 2rem;
 }
 .nav_details {
@@ -55,6 +60,12 @@ header {
   display: block;
   font-size: 1rem;
 }
+.ham_nav {
+  display: none;
+}
+/* #click {
+  display: none;
+} */
 
 .nav_list {
   font-weight: 700;
@@ -393,6 +404,7 @@ footer h1 {
   header {
     width: 100vw;
   }
+
   .home_container {
     max-width: 1200px;
     margin: 0 auto !important;
@@ -402,11 +414,51 @@ footer h1 {
   .home_img {
     display: none;
   }
-  .nav_details {
+  .ham_nav {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    background: #1a1a1d;
+    left: -100%;
+    transition: 300ms all ease;
+
+    /* left: -100%; */
+  }
+  /* .nav ul {
     padding: 1.5rem 0rem;
-    float: left;
-    display: none;
+    top: 80px;
+    left: 0;
+    position: fixed;
     font-size: 1rem;
+    height: 100vh;
+    width: 100%;
+    background: var(--primary);
+    transition: 300ms all ease-in;
+  }
+  #click:checked ~ ul {
+    left: 0%;
+  }
+}
+.nav_list {
+  display: block;
+  text-align: center;
+  font-size: 6vw;
+  margin-top: 60px;
+}*/
+  .nav_details {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  .nav_list li {
+    margin-bottom: 30px;
   }
   .skills_main {
     display: flex;
@@ -459,8 +511,35 @@ footer h1 {
     display: grid;
     place-items: center;
   }
-}
-/* @media (min-width: 992px) {
+  .nav_list_ham {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50vw;
+    font-size: 3rem;
+    font-weight: 700;
+    list-style: none;
+  }
+  .nav_list_ham li {
+    margin-bottom: 3rem;
+  }
+  .nav_list_ham a {
+    transition: 200ms all ease-in;
+  }
+
+  .nav_list_ham a:hover {
+    color: var(--link);
+    font-size: 5rem;
+  }
+  .crosss {
+    font-size: 8vw;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+  }
+
+  /* @media (min-width: 992px) {
   .container {
     max-width: 960px;
   }
@@ -470,3 +549,4 @@ footer h1 {
     max-width: 720px;
   }
 } */
+}
